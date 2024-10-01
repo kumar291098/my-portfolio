@@ -1,0 +1,94 @@
+/* Header.css */
+.navbar {
+  transition: background-color 0.3s ease;
+  z-index: 1030;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+
+/* Adjust toggler icon color */
+.navbar-toggler {
+  border: 1px solid transparent; /* Initialize border */
+}
+
+/* Light mode toggler icon and border */
+.navbar-toggler-light {
+  border-color: #000; /* Black border for light mode */
+}
+
+.navbar-toggler-light .navbar-toggler-icon {
+  background-color: #fcf8f8; /* Black icon for light mode */
+}
+
+/* Dark mode toggler icon and border */
+.navbar-toggler-dark {
+  border-color: #ffffff !important; /* White border for dark mode */
+  color: rgb(255, 255, 255) !important;
+}
+
+.navbar-toggler-dark .navbar-toggler-icon {
+  background-color: #9c9b9b ; /* White icon for dark mode */
+}
+
+/* styles/Header.css */
+
+/* Button to be transparent on hover */
+/* src/style/Header.css */
+
+.navbar-collapse {
+  transition: max-height 0.3s ease-out; /* Adjusts the max height over time */
+  overflow: hidden; /* Ensures no overflow during collapse */
+}
+
+/* Optionally, you can define different max heights */
+.navbar-collapse.collapsing {
+  max-height: 0; /* Collapsed state */
+}
+
+.navbar-collapse.show {
+  max-height: 700px; /* Expanded state, adjust as needed */
+}
+
+/* Like Wrapper */
+.like-wrapper {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.like-wrapper:hover {
+  background-color: transparent !important; /* Make the background transparent on hover */
+}
+
+/* Icon hover effect */
+.like-icon {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Increase size of the icon on hover */
+.like-wrapper:hover .like-icon {
+  transform: scale(1.2); /* Scale the icon to 120% on hover */
+}
+
+/* Like Count */
+.like-count {
+  margin-left: 2px; /* Adjust the space between the icon and the count */
+  transition: color 0.3s ease; /* Optional: smooth transition for the like count color */
+}
+
+
+.custom-button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease ;
+}
+.custom-button-dark:hover {
+  background-color: #495057 !important; /* Slightly lighter on hover */
+}
+
+.custom-button-light:hover {
+  background-color: #e2e6ea !important; /* Slightly darker on hover */
+}

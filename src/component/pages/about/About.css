@@ -1,0 +1,44 @@
+.academic-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .academic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.75rem;
+    color: #007bff;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+  
+  .modal-body {
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  @media (max-width: 768px) {
+    .academic-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+  

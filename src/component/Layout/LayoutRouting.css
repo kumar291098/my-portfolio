@@ -1,0 +1,57 @@
+/* LayoutRouting.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+/*   
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+   */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of the content */
+    background-color: #fff; /* Set background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    height: 70px;
+    
+     /* Adjust height according to your design */
+  }
+  
+  main {
+    margin-top: 70px; /* Adjust margin-top to match header height */
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    height: 70px; /* Same height as header */
+    display: flex;
+    align-items: center;
+    background-color: inherit; /* Inherit background for theme compatibility */
+  }
+  .flex-grow-1{
+    margin-top: 10px;
+  }
+  
+  
+  /* styles/Header.css or styles/App.css */
+.content-section {
+    transition: margin-top 0.3s ease; /* Smooth transition */
+  }
+  
+  .content-section.expanded {
+    margin-top: 250px; /* Height of the expanded navbar */
+  }
+  
+  .content-section.collapsed {
+    margin-top: 10px; /* Height of the collapsed navbar */
+  }
+  
