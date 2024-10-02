@@ -1,42 +1,84 @@
 .project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px; /* Optional: Slight rounding of card corners */
-  }
-  
-  .project-card:hover {
-    transform: scale(1.05); /* Slightly scale the card on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
 
-  .light-mode {
-    background-color: #f8f9fa;
-    color: #343a40;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dark-mode {
-    background-color: #2e2e2e;
-    color: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Text styling based on theme */
-  .card-title.light-text,
-  .card-description.light-text {
-    color: #343a40;
-  }
-  
-  .card-title.dark-text,
-  .card-description.dark-text {
-    color: #f8f9fa;
-  }
-  
-  /* Footer specific styles */
-  .light-footer {
-    background-color: #ffffff;
-  }
-  
-  .dark-footer {
-    background-color: #3a3a3a;
-  }
+/* Card Themes */
+.project-card.light-mode {
+  background: #f9f9f9; /* Light mode card color */
+  color: #333; /* Dark text for light mode */
+}
+
+.project-card.dark-mode {
+  background: #1c1c1e; /* Dark mode card color */
+  color: #e5e5e5; /* Light text for dark mode */
+}
+
+/* Header and Body Styles */
+.card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Footer Styles */
+.project-card .card-footer {
+  background: transparent; /* Transparent footer */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.project-card.dark-mode .card-footer {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card.light-mode .card-footer {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.project-card .btn {
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 5px 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-card .btn:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.project-card .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.project-card .btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.project-card .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}

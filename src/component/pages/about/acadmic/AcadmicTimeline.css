@@ -1,52 +1,165 @@
-.academic-entry {
-  position: relative;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* Global Styles */
+.timeline-section {
+  padding: 2rem 1rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-.academic-entry:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-.dark .academic-entry:hover {
-  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
-}
-
-.academic-entry h3 {
-  transition: color 0.3s ease-in-out;
-}
-
-.academic-entry:hover h3 {
-  color: #3b82f6;
-}
-
-.dark .academic-entry:hover h3 {
-  color: #60a5fa;
-}
-
-/* Updated Light Mode Styles */
 .light-theme {
-  background-color: #f9fafb; /* Light neutral color for background */
-  color: #1f2937; /* Dark gray text color */
+  background-color: #f0f0f0;
+  color: #333;
 }
 
-.academic-entry.light-mode {
-  border: 1px solid #e5e7eb;
-  background-color: #f3f4f6; /* Soft gray for the entry card */
+/* Container Styles */
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.academic-entry.light-mode:hover {
-  background-color: #e7eaf0; /* Slightly darker gray on hover */
+.timeline-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
-.academic-entry h3.light-mode {
-  color: #374151; /* Darker gray for title text */
+/* Timeline Card Styles */
+.timeline-card {
+  background-color: #ffffff;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.academic-entry h3.light-mode:hover {
-  color: #2563eb; /* Soft blue for title on hover */
+.dark-theme .timeline-card {
+  background-color: #1e1e1e;
 }
 
-.academic-entry.light-mode .text-muted {
-  color: #6b7280; /* Muted gray for secondary text */
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.expanded {
+  transform: translateY(0);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.institution-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.institution-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.degree {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.duration-cgpa {
+  text-align: right;
+}
+
+.cgpa-badge {
+  display: inline-block;
+  background: #4285f4;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Icon Styles */
+.icon {
+  margin-right: 0.5rem;
+  color: #4285f4;
+}
+
+.university-icon {
+  font-size: 2rem;
+}
+
+.book-icon,
+.project-icon {
+  font-size: 1.5rem;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1rem;
+}
+
+.coursework-heading,
+.projects-heading {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.coursework-list {
+  padding-left: 1rem;
+  list-style: circle;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.coursework-item {
+  margin: 0.3rem 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.dark-theme .project-card {
+  background: #262626;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #555;
 }

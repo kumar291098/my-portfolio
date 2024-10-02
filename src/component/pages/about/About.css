@@ -1,188 +1,125 @@
+/* General About Container */
 .about-container {
-  min-height: 100vh;
-  padding: 60px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
+  padding: 2rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .about-container.light {
-  background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
-  color: #212529;
+  background-color: #f4f4f9;
 }
 
 .about-container.dark {
-  background: linear-gradient(to bottom right, #1e293b, #0f172a);
-  color: #f8f9fa;
+  background-color: #1e1e1e;
 }
 
-/* Section Styling */
-.about-me-section,
-.timeline-section,
-.skills-section,
-.prompting-section {
-  margin-bottom: 60px;
-  padding: 30px;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease;
-}
-
-.about-me-section:hover,
-.timeline-section:hover,
-.skills-section:hover,
-.prompting-section:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Titles */
+/* Section Styles */
 .section-title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
   position: relative;
-  transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
+  content: "";
+  width: 50px;
   height: 4px;
-  background: #007bff;
-  margin: 10px auto;
+  background-color: #667eea;
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-container.dark .section-title {
-  color: #ffc107;
+/* About Me Section */
+.about-me-section {
+  padding: 3rem 1rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
 }
 
-.about-container.dark .section-title::after {
-  background: #ffc107;
+.dark .about-me-section {
+  background: #252525;
+  color: #ffffff;
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-/* Skill Bar Customization */
-.circular-skill-bar {
-  margin: 20px auto;
-  position: relative;
-  padding: 20px;
-  border-radius: 50%;
-  background: rgba(0, 123, 255, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+.custom-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.circular-skill-bar:hover {
-  transform: scale(1.1);
-  background: rgba(0, 123, 255, 0.3);
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
 }
 
-/* experience css */
-/* Updated Experience Section Styling */
-.experience-section {
-  margin-bottom: 60px;
-  padding: 30px;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease;
-  background: linear-gradient(to right, #007bff, #00bfff);
-  color: white;
-  position: relative;
+.list-icon {
+  margin-right: 0.5rem;
+  color: #667eea;
 }
 
-/* Timeline Styling */
-.experience-timeline {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  bottom: 20px;
-  width: 4px;
-  background: rgba(255, 255, 255, 0.3);
+.list-text {
+  font-size: 1.1rem;
 }
 
-.experience-item {
-  position: relative;
-  margin: 20px 0;
-  padding: 20px 30px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  overflow: hidden;
+/* Academic Timeline Section */
+.timeline-section {
+  margin-top: 3rem;
 }
 
-.experience-item::before {
-  content: '';
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #00bfff;
-  border: 2px solid #007bff;
-  transform: translateY(-50%);
-  transition: background 0.3s ease;
+/* Prompting Section */
+.prompting-section {
+  margin-top: 4rem;
+  padding: 3rem 1rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.experience-item:hover::before {
-  background: #ffc107; /* Change dot color on hover */
+.dark .prompting-section {
+  background: #252525;
 }
 
-.experience-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.prompting-section .section-title {
+  color: #667eea;
 }
 
-.job-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #00ffff; /* Use a bright color for job titles */
+/* Footer Styles */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.job-duration {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  font-style: italic;
-  color: #ffecb3; /* Softer yellow for duration */
+.dark .footer {
+  background: #222;
+  border-top: 1px solid #333;
+  color: #ddd;
 }
 
-.job-description {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.5;
+.footer a {
+  color: #667eea;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .experience-section {
-    padding: 20px;
-  }
-
-  .experience-item {
-    padding: 15px;
-  }
-
-  .job-title {
-    font-size: 1.2rem;
-  }
-
-  .experience-timeline {
-    display: none; /* Hide timeline on smaller screens */
-  }
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-container {
-    padding: 20px;
-  }
-  .section-title {
-    font-size: 2rem;
-  }
+.footer a:hover {
+  color: #334ac0;
 }

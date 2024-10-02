@@ -46,3 +46,52 @@
 .circular-skill-bar:hover .percentage {
   color: #06b6d4; /* Change text color on hover */
 }
+
+/* Skills Section Styles */
+.skills-section {
+  margin-bottom: 60px;
+  padding: 30px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.skills-section:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 10px auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.circular-skill-bar {
+  margin: 20px auto;
+  position: relative;
+  padding: 20px;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.circular-skill-bar:hover {
+  transform: scale(1.1);
+  background: rgba(0, 123, 255, 0.3);
+}

@@ -7,7 +7,7 @@ const ExperienceSection: React.FC = () => {
   const { theme } = useTheme();
 
   return (
-    <section className={`experience-section ${theme === 'dark' ? 'dark' : 'light'}`}>
+    <section className={`experience-section mt-5 ${theme === 'dark' ? 'dark' : 'light'}`}>
       <h2 className="section-title">Experience</h2>
       <div className="experience-timeline"></div>
       <div className="experience-list">

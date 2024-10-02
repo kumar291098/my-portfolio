@@ -1,0 +1,14 @@
+/* Watermark.css */
+body::before {
+    content: 'Avnish Kumar'; /* Replace with your desired watermark text */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the watermark */
+    font-size: 5rem; /* Adjust the size as needed */
+    color: rgba(0, 0, 0, 0.1); /* Light gray, transparent */
+    z-index: -1; /* Push behind other elements */
+    pointer-events: none; /* Prevent interactions */
+    user-select: none; /* Prevent text selection */
+  }
+  

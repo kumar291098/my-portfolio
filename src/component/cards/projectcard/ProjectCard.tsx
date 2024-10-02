@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useTheme } from '../../theme-provider/ThemeContext';
-import './ProjectCard.css'; // Assuming you have specific CSS for animations and styling
+import './ProjectCard.css'; // Importing the CSS file
 
 interface ProjectCardProps {
   title: string;
@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubLink,
   liveDemoLink,
 }) => {
-  const { theme } = useTheme(); // Access the current theme using the useTheme hook
+  const { theme } = useTheme();
 
   return (
     <Card className={`project-card h-100 shadow-sm ${theme}-mode`}>
@@ -36,16 +36,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="d-flex justify-content-between">
           <Button
             href={githubLink}
-            variant='outline-primary' 
-            // variant={theme === 'light' ? 'outline-primary' : 'outline-light'}
+            variant="outline-primary"
             size="sm"
           >
             GitHub
           </Button>
           <Button
             href={liveDemoLink}
-            variant='outline-secondary' 
-            // variant={theme === 'light' ? 'outline-secondary' : 'outline-light'}
+            variant="outline-secondary"
             size="sm"
           >
             Live Demo

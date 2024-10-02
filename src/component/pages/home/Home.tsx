@@ -101,32 +101,7 @@ const Home: React.FC = () => {
         </Container>
       </div>
 
-      {/* About Me Section */}
-      <Container className={`py-5 ${theme === 'dark' ? 'bg-black text-white' : ''}`}>
-        <h2 className="text-center mb-4" style={{ color: '#667eea' }}>About Me</h2>
-        <Row className="justify-content-center">
-          <Col md={8}>
-            <Card className={`border-0 shadow-sm ${theme === 'dark' ? 'bg-secondary text-white' : ''}`}>
-              <Card.Body className="p-4">
-                <p className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
-                  As a forward-thinking Full Stack Developer, I blend creativity with technical expertise to build 
-                  innovative web solutions. My passion lies in exploring the intersections of web development and 
-                  machine learning, constantly pushing the boundaries of what's possible in the digital realm.
-                </p>
-                <p className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
-                  With a keen eye for detail and a drive for excellence, I specialize in:
-                </p>
-                <ul className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
-                  <li>Crafting responsive and intuitive user interfaces</li>
-                  <li>Developing robust and scalable backend systems</li>
-                  <li>Integrating machine learning models to enhance application intelligence</li>
-                  <li>Optimizing performance for seamless user experiences</li>
-                </ul>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      
 
       {/* Projects Section */}
       <div style={{ background: theme === 'dark' ? '#1a1a1a' : '#f8f9fa' }}>

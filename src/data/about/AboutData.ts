@@ -39,25 +39,45 @@ export const aboutData = {
 };
 
   
-  export const academicEntries = [
-    {
-      institution: "Technocrats Institute of Technology",
-      degree: "BE in Information Technology",
-      duration: "2016 - 2020",
-      cgpa: "7.83",
-      projects: [
-        { title: "Project 1", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
-        { title: "Project 2", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
-      ],
-    },
-    {
-      institution: "Indian Institute of Technology Bhubaneswar",
-      degree: "M.Tech in Computer Science",
-      duration: "2021 - 2023",
-      cgpa: "7.97",
-      projects: [
-        { title: "Project 1", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
-        { title: "Project 2", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
-      ],
-    },
-  ];
+export const academicEntries = [
+  {
+    institution: "Technocrats Institute of Technology",
+    degree: "BE in Information Technology",
+    duration: "2016 - 2020",
+    cgpa: "7.83",
+    coursework: [
+      "Operating System",
+      "DataBase Management System",
+      "Computer Network",
+      "Theory of Computation",
+      "Algorithm",
+      "Digital Logic Design",
+      "Computer Organization and Architecture",
+    ],
+    projects: [
+      { title: "Project 1", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
+      { title: "Project 2", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
+    ],
+  },
+  {
+    institution: "Indian Institute of Technology Bhubaneswar",
+    degree: "M.Tech in Computer Science",
+    duration: "2021 - 2023",
+    cgpa: "7.97",
+    coursework: [
+      "Cloud Computing",
+      "Network System and Security",
+      "Cryptography",
+      "Advance Algorithm",
+      "Software Testing and Verification",
+      "Software Engineering",
+      "Digital Forensic",
+      "Machine Learning",
+      "Data Analytics",
+    ],
+    projects: [
+      { title: "Project 1", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
+      { title: "Project 2", link: "https://github.com/your-github-repo", description: "Description and Tech Stack" },
+    ],
+  },
+];

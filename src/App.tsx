@@ -4,7 +4,7 @@ import Header from './component/Layout/Header';
 import LayoutRouting from './component/Layout/LayoutRouting';
 import Routing from './component/pages/Routing';
 import { NavbarProvider } from "./../src/component/context/NavbarContext";
-
+import './Watermark.css';
 function App() {
   
   return (
