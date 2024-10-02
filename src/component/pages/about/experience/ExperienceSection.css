@@ -1,0 +1,160 @@
+/* Experience Section */
+.experience-section {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    text-align: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-section.light {
+    background: linear-gradient(to bottom right, #e3f2fd, #f3f4f6);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+  }
+  
+  .experience-section.dark {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+    color: #f8f9fa;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Timeline Indicator */
+  .experience-timeline {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    background: rgba(0, 123, 255, 0.3); /* Light blue line */
+  }
+  
+  .experience-section.dark .experience-timeline {
+    background: rgba(255, 255, 255, 0.3); /* Light color in dark mode */
+  }
+  
+  /* Experience Item */
+  .experience-item {
+    position: relative;
+    margin: 30px 60px 30px 80px; /* Adjusted for timeline space */
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 4px solid #007bff; /* Vertical left border for each job */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .experience-section.dark .experience-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #ffc107; /* Different color in dark mode */
+  }
+  
+  .experience-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Company Info Styling */
+  .company-info {
+    margin-bottom: 10px;
+  }
+  
+  .job-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .experience-section.dark .job-title {
+    color: #ffc107; /* Brighter color in dark mode */
+  }
+  
+  .job-duration {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-style: italic;
+    color: #495057; /* Softer gray for duration */
+  }
+  
+  .experience-section.dark .job-duration {
+    color: #b0bec5; /* Light gray for duration in dark mode */
+  }
+  
+  .job-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529; /* Default color for light mode */
+  }
+  
+  .experience-section.dark .job-description {
+    color: #f8f9fa; /* Lighter text for descriptions in dark mode */
+  }
+  
+  /* Project List Styling */
+  .projects-title {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .experience-section.dark .projects-title {
+    color: #ffc107; /* Brighter color for projects in dark mode */
+  }
+  
+  .project-list {
+    margin-top: 10px;
+    padding-left: 20px; /* Indent for project items */
+  }
+  
+  /* Project Item Styling */
+  .project-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 4px solid #007bff; /* Blue left border for projects */
+    background: rgba(0, 123, 255, 0.05); /* Light blue background */
+    border-radius: 8px;
+  }
+  
+  .experience-section.dark .project-item {
+    border-left: 4px solid #ffc107;
+    background: rgba(255, 255, 255, 0.1); /* Lighter background in dark mode */
+  }
+  
+  .project-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00bfff;
+  }
+  
+  .project-timeline {
+    font-size: 0.9rem;
+    color: #b0bec5; /* Light gray for project timelines */
+  }
+  
+  .project-details {
+    font-size: 1rem;
+    color: #212529;
+  }
+  
+  .experience-section.dark .project-details {
+    color: #f8f9fa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 20px;
+    }
+  
+    .experience-item {
+      margin: 20px 20px;
+    }
+  
+    .experience-timeline {
+      display: none; /* Hide timeline on smaller screens */
+    }
+  }
+  

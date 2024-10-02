@@ -1,0 +1,48 @@
+.circular-skill-bar {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.circular-skill-bar:hover {
+  transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.circular-skill-bar svg {
+  transform: rotate(-90deg); /* To start the progress from the top */
+  overflow: visible;
+}
+
+.background-circle {
+  stroke-opacity: 0.3;
+}
+
+.progress-circle {
+  transition: stroke-dashoffset 1s ease, stroke 1s; /* Smooth progress and color change */
+  transform-origin: 50% 50%;
+  stroke-linecap: round; /* Round end of the circle stroke */
+}
+
+.skill-info {
+  text-align: center;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.percentage {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #3b82f6;
+  font-weight: 700;
+  transition: color 0.5s;
+}
+
+.circular-skill-bar:hover .percentage {
+  color: #06b6d4; /* Change text color on hover */
+}

@@ -7,8 +7,13 @@ import Typewriter from "typewriter-effect";
 import image from "../../../assets/avnish-gate-image.png";
 import gfg from "../../../assets/gfglogo.svg";
 import leetcode from "../../../assets/leetcode-logo.png";
+import ProjectCard from '../../cards/projectcard/ProjectCard';
+import { projects } from '../../../data/projectList';
+import { useTheme } from '../../theme-provider/ThemeContext'; // Import the useTheme hook
 
 const Home: React.FC = () => {
+  const { theme } = useTheme(); // Get the current theme
+
   const handleTypingComplete = (id: string) => {
     const cursor = document.querySelector(`#${id} .Typewriter__cursor`);
     if (cursor) {
@@ -17,10 +22,10 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Container fluid className="p-0">
+    <Container fluid className={`p-0 ${theme === 'dark' ? 'bg-dark' : ''}`}>
       {/* Hero Section with Gradient Background */}
-      <div className="hero-section text-white py-5" style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      <div className={`hero-section text-white py-5 ${theme === 'dark' ? 'bg-black' : ''}`} style={{
+        background: theme === 'dark' ? 'black' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -79,7 +84,7 @@ const Home: React.FC = () => {
                 Passionate about crafting seamless user experiences and leveraging AI to solve complex challenges.
               </p>
               <div className="d-flex flex-wrap justify-content-start mt-3">
-                <Button href="#projects" className="me-2 mb-2" variant="outline-light" size="lg">
+                <Button href="/projects" className="me-2 mb-2" variant="outline-light" size="lg">
                   Explore My Projects
                 </Button>
                 <Button
@@ -97,21 +102,21 @@ const Home: React.FC = () => {
       </div>
 
       {/* About Me Section */}
-      <Container className="py-5">
+      <Container className={`py-5 ${theme === 'dark' ? 'bg-black text-white' : ''}`}>
         <h2 className="text-center mb-4" style={{ color: '#667eea' }}>About Me</h2>
         <Row className="justify-content-center">
           <Col md={8}>
-            <Card className="border-0 shadow-sm">
+            <Card className={`border-0 shadow-sm ${theme === 'dark' ? 'bg-secondary text-white' : ''}`}>
               <Card.Body className="p-4">
-                <p className="lead text-muted">
+                <p className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
                   As a forward-thinking Full Stack Developer, I blend creativity with technical expertise to build 
                   innovative web solutions. My passion lies in exploring the intersections of web development and 
                   machine learning, constantly pushing the boundaries of what's possible in the digital realm.
                 </p>
-                <p className="lead text-muted">
+                <p className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
                   With a keen eye for detail and a drive for excellence, I specialize in:
                 </p>
-                <ul className="lead text-muted">
+                <ul className={`lead ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
                   <li>Crafting responsive and intuitive user interfaces</li>
                   <li>Developing robust and scalable backend systems</li>
                   <li>Integrating machine learning models to enhance application intelligence</li>
@@ -124,28 +129,20 @@ const Home: React.FC = () => {
       </Container>
 
       {/* Projects Section */}
-      <div style={{ background: '#f8f9fa' }}>
+      <div style={{ background: theme === 'dark' ? '#1a1a1a' : '#f8f9fa' }}>
         <Container className="py-5">
           <h2 className="text-center mb-4" style={{ color: '#667eea' }}>Featured Projects</h2>
           <Row>
-            {[1, 2, 3].map((project) => (
-              <Col lg={4} md={6} className="mb-4" key={project}>
-                <Card className="h-100 shadow-sm hover-lift">
-                  <Card.Img variant="top" src={`https://picsum.photos/seed/${project}/300/200`} />
-                  <Card.Body>
-                    <Card.Title>Innovative Solution {project}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">React | Node.js | TensorFlow</Card.Subtitle>
-                    <Card.Text>
-                      A groundbreaking application that leverages cutting-edge technologies to address real-world challenges.
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer className="bg-white border-0">
-                    <div className="d-flex justify-content-between">
-                      <Button variant="outline-primary" size="sm">View Details</Button>
-                      <Button variant="outline-secondary" size="sm">Live Demo</Button>
-                    </div>
-                  </Card.Footer>
-                </Card>
+            {projects.map((project, index) => (
+              <Col lg={4} md={6} className="mb-4" key={index}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  techStack={project.techStack}
+                  image={project.image}
+                  githubLink={project.githubLink}
+                  liveDemoLink={project.liveDemoLink}
+                />
               </Col>
             ))}
           </Row>
@@ -153,9 +150,11 @@ const Home: React.FC = () => {
       </div>
 
       {/* Contact Section */}
-      <Container className="py-5 text-center">
+      <Container className={`py-5 text-center ${theme === 'dark' ? 'bg-black text-white' : ''}`}>
         <h2 className="mb-4" style={{ color: '#667eea' }}>Let's Connect</h2>
-        <p className="lead mb-4">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+        <p className={`lead mb-4 ${theme === 'dark' ? 'text-light' : 'text-muted'}`}>
+          I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+        </p>
         <div className="d-flex flex-wrap justify-content-center">
           <Button href="mailto:avnishkumar29101998@gmail.com" className="m-2" variant="outline-danger" size="lg">
             <EmailIcon className="me-2" /> Email Me

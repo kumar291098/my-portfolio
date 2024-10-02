@@ -1,0 +1,42 @@
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Optional: Slight rounding of card corners */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slightly scale the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+  }
+
+
+  .light-mode {
+    background-color: #f8f9fa;
+    color: #343a40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode {
+    background-color: #2e2e2e;
+    color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Text styling based on theme */
+  .card-title.light-text,
+  .card-description.light-text {
+    color: #343a40;
+  }
+  
+  .card-title.dark-text,
+  .card-description.dark-text {
+    color: #f8f9fa;
+  }
+  
+  /* Footer specific styles */
+  .light-footer {
+    background-color: #ffffff;
+  }
+  
+  .dark-footer {
+    background-color: #3a3a3a;
+  }
