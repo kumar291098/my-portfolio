@@ -1,5 +1,5 @@
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -29,6 +29,9 @@
 
 .card-subtitle {
   font-size: 0.85rem;
+}
+.dark-mode .card-subtitle {
+  color: #ffffff !important; /* Set techStack color to white in dark mode */
 }
 
 .card-description {
@@ -82,3 +85,4 @@
   background-color: #6c757d;
   color: #fff;
 }
+  

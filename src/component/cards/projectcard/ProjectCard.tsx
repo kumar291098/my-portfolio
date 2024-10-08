@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveDemoLink,
 }) => {
   const { theme } = useTheme();
-
+  console.log('Image URL:', image);
   return (
     <Card className={`project-card h-100 shadow-sm ${theme}-mode`}>
       <Card.Img variant="top" src={image} alt={title} />

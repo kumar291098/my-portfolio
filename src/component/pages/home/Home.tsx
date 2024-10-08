@@ -10,7 +10,8 @@ import leetcode from "../../../assets/leetcode-logo.png";
 import ProjectCard from '../../cards/projectcard/ProjectCard';
 import { projects } from '../../../data/projectList';
 import { useTheme } from '../../theme-provider/ThemeContext'; // Import the useTheme hook
-
+import replitLogo from "../../../assets/icons8-replit-logo.svg";
+import './Home.css'
 const Home: React.FC = () => {
   const { theme } = useTheme(); // Get the current theme
 
@@ -84,16 +85,28 @@ const Home: React.FC = () => {
                 Passionate about crafting seamless user experiences and leveraging AI to solve complex challenges.
               </p>
               <div className="d-flex flex-wrap justify-content-start mt-3">
-                <Button href="/projects" className="me-2 mb-2" variant="outline-light" size="lg">
+                <Button href="/projects" className="me-2 mb-2 project-button" variant="outline-light" size="lg">
                   Explore My Projects
                 </Button>
                 <Button
                   href="https://github.com/kumar291098"
-                  className="mb-2"
+                  className="me-2 mb-2 github-button"
                   variant="light"
                   size="lg"
                 >
                   <GitHubIcon className="me-2" /> GitHub Portfolio
+                </Button>
+                <Button
+                  href="https://replit.com/@AvnishKumar12"
+                  className="mb-2 replit-button"
+                  style={{
+                    backgroundColor: "#667eea", // Custom Replit Button Background Color
+                    color: "white",
+                    border: "none",
+                  }}
+                  size="lg"
+                >
+                  <img src={replitLogo} alt="Replit" style={{ width: "25px", height: "30px", marginRight: "8px" }} /> Replit
                 </Button>
               </div>
             </Col>

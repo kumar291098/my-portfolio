@@ -12,7 +12,7 @@ const ProjectsSection: React.FC = () => {
       <h2 className="text-center mb-4">My Projects</h2>
       <Row>
         {projects.map((project, index) => (
-          <Col lg={4} md={6} key={index} className="d-flex">
+          <Col lg={4} md={6} key={index} className="d-flex mb-4">
             <ProjectCard
               title={project.title}
               description={project.description}
