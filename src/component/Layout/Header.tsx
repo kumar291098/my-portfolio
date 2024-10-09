@@ -36,8 +36,8 @@ const Header: React.FC = () => {
         setUser(user);
         fetchUserLikeStatus(user.email)
           .then((data) => {
-            if (data.status  && user.email) {
-              console.log(data.status)
+            if (data.status && user.email) {
+              console.log(data.status);
 
               setLikedEmails([user.email]);
             } else {
@@ -150,30 +150,37 @@ const Header: React.FC = () => {
               <span className="like-count">{likeCount}</span>
             </div>
             {user ? (
-  <Button
-    onClick={logout}
-    variant="light"
-    className={`me-2 border ${
-      theme === "dark" ? "border-white text-white bg-dark custom-button-dark" : "border-black text-black bg-light custom-button-light"
-    } custom-button`}
-  >
-    Logout
-  </Button>
-) : (
-  <Button
-    onClick={loginWithGoogle}
-    variant="light"
-    className={`me-2 border ${
-      theme === "dark" ? "border-white text-white bg-dark custom-button-dark" : "border-black text-black bg-light custom-button-light"
-    } custom-button`}
-  >
-    Login
-  </Button>
-)}
+              <Button
+                onClick={logout}
+                variant="light"
+                className={`me-2 border ${
+                  theme === "dark"
+                    ? "border-white text-white bg-dark custom-button-dark"
+                    : "border-black text-black bg-light custom-button-light"
+                } custom-button`}
+              >
+                Logout
+              </Button>
+            ) : (
+              <Button
+                onClick={loginWithGoogle}
+                variant="light"
+                className={`me-2 border ${
+                  theme === "dark"
+                    ? "border-white text-white bg-dark custom-button-dark"
+                    : "border-black text-black bg-light custom-button-light"
+                } custom-button`}
+              >
+                Login
+              </Button>
+            )}
 
             <Button
               variant={theme === "dark" ? "light" : "dark"}
               onClick={toggleTheme}
+              className={`theme-toggle-button ${
+                theme === "dark" ? "theme-toggle-button-dark" : "theme-toggle-button-light"
+              }`}
             >
               {theme === "dark" ? "Light Mode" : "Dark Mode"}
             </Button>

@@ -92,3 +92,20 @@
 .custom-button-light:hover {
   background-color: #e2e6ea !important; /* Slightly darker on hover */
 }
+
+/* Theme Toggle Button Styles */
+.theme-toggle-button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for light mode */
+.theme-toggle-button-light:hover {
+  background-color: #434446 !important; /* Light grey color on hover */
+  color: #ffffff !important; /* Slightly darker text */
+}
+
+/* Hover effect for dark mode */
+.theme-toggle-button-dark:hover {
+  background-color: #bec3c8 !important; /* Less dark color on hover */
+  color: #000000 !important; /* Keep text color light */
+}

@@ -45,3 +45,43 @@
     transition: background-color 0.3s ease-in-out; /* Smooth transition */
     color: rgb(0, 0, 0) !important; /* Keep text color white */
   }
+  .btn-outline-danger:hover {
+    background-color: red !important; /* Red background on hover */
+    color: white !important; /* White text on hover */
+    border-color: red !important; /* Update border color */
+  }
+  
+  /* LinkedIn Button Hover */
+  .btn-outline-primary:hover {
+    background-color: #0a66c2 !important; /* LinkedIn blue */
+    color: white !important; /* White text on hover */
+    border-color: #0a66c2 !important; /* Update border color */
+  }
+  
+  /* GeeksforGeeks Button Hover */
+  .btn-outline-success:hover {
+    background-color: #00a000 !important; /* GFG green */
+    color: white !important; /* White text on hover */
+    border-color: #00a000 !important; /* Update border color */
+  }
+  
+  /* LeetCode Button Hover */
+  .btn-outline-warning:hover {
+    background-color: #f89f1b !important; /* LeetCode yellow */
+    color: white !important; /* White text on hover */
+    border-color: #f89f1b !important; /* Update border color */
+  }
+  
+  @media (max-width: 768px) {
+    .btn {
+      width: 100%; /* Full width on mobile screens */
+      min-width: unset; /* Remove default min-width */
+      margin: 8px 0; /* Add vertical spacing */
+    }
+  
+    .d-flex.flex-wrap.justify-content-center,
+    .d-flex.flex-wrap.justify-content-start {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center buttons */
+    }
+  }
