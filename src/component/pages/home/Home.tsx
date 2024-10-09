@@ -117,7 +117,7 @@ const Home: React.FC = () => {
       
 
       {/* Projects Section */}
-      <div style={{ background: theme === 'dark' ? '#1a1a1a' : '#f8f9fa' }}>
+      {/* <div style={{ background: theme === 'dark' ? '#1a1a1a' : '#f8f9fa' }}>
         <Container className="py-5">
           <h2 className="text-center mb-4" style={{ color: '#667eea' }}>Featured Projects</h2>
           <Row>
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
             ))}
           </Row>
         </Container>
-      </div>
+      </div> */}
 
       {/* Contact Section */}
       <Container className={`py-5 text-center ${theme === 'dark' ? 'bg-black text-white' : ''}`}>

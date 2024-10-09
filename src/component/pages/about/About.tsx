@@ -49,12 +49,12 @@ const About: React.FC = () => {
         <SkillBar />
 
         {/* Prompting Skills Section */}
-        <section className="prompting-section">
+        {/* <section className="prompting-section">
           <h2 className="section-title">Prompting Skills</h2>
           <p className="text-lg leading-relaxed font-light">
             Prompting is a skill that involves effectively interacting with chatbots to elicit high-quality responses.
           </p>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="footer">

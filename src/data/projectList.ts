@@ -23,14 +23,7 @@ export interface Project {
       liveDemoLink: 'https://instagram-reach-analysis-3hcf.vercel.app/',
       image: socialMediaImage 
     },
-    {
-      title: 'Data Center Energy Management',
-      description: 'A web-based application to manage energy consumption in data centers.',
-      techStack: 'React, Node.js, MongoDB',
-      githubLink: 'https://github.com/yourrepo/data-center-energy-management',
-      liveDemoLink: 'https://datacenter.demo.com',
-      image: 'https://picsum.photos/300/200?random=2'
-    },
+    
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing projects and technical skills.',

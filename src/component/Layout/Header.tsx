@@ -36,7 +36,9 @@ const Header: React.FC = () => {
         setUser(user);
         fetchUserLikeStatus(user.email)
           .then((data) => {
-            if (data.status === 1 && user.email) {
+            if (data.status  && user.email) {
+              console.log(data.status)
+
               setLikedEmails([user.email]);
             } else {
               setLikedEmails([]);
