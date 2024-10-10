@@ -3,6 +3,8 @@ import socialMediaImage from '../assets/social-media.jpeg';
 import tracker from '../assets/Tracker.png';
 import portfolio from '../assets/portfolio.png';
 import textUtill from '../assets/TextUtill.png';
+import stock from '../assets/stock.jpeg';
+import placement from '../assets/placement.jpeg';
 // Define the structure of the project data using TypeScript
 export interface Project {
     title: string;
@@ -22,6 +24,22 @@ export interface Project {
       githubLink: 'https://github.com/kumar291098/Instagram-Reach-Analysis',
       liveDemoLink: 'https://instagram-reach-analysis-3hcf.vercel.app/',
       image: socialMediaImage 
+    },
+    {
+      title: 'Stock Trend Prediction',
+      description: 'A real-time web application that predicts stock prices using historical data and machine learning models. The app features interactive data visualization, configurable parameters for model training, and a clear display of prediction vs. actual stock prices.',
+      techStack: ' Streamlit, Matplotlib for Visualization, Keras, TensorFlow, Scikit-Learn, Pandas, NumPy, Yahoo Finance API (yfinance),  Streamlit Community Cloud, GitHub Integration',
+      githubLink: 'https://github.com/kumar291098/stock-price-prediction/tree/master',
+      liveDemoLink: 'https://stock-price-prediction-mrg8jwn7n4sgb3xbrbrfkt.streamlit.app/',
+      image: stock
+    },
+    {
+      title: 'Job Placement Prediction',
+      description: "This project aims to predict the likelihood of a student's placement based on various academic and demographic features. The model leverages machine learning techniques to analyze data and provide insights on a student's potential employability.",
+      techStack: ' Streamlit, Matplotlib for Visualization,  Scikit-Learn, Pandas, NumPy,  Streamlit Community Cloud, GitHub Integration',
+      githubLink: 'https://github.com/kumar291098/JobPlacementPrediction/tree/main',
+      liveDemoLink: 'https://jobplacementprediction-4lhjsjnci9os6sqcobdgu2.streamlit.app/',
+      image: placement
     },
     
     {
