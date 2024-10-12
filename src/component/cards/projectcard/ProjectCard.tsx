@@ -45,6 +45,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={liveDemoLink}
             variant="outline-secondary"
             size="sm"
+            target="_blank"
+             rel="noopener noreferrer"
           >
             Live Demo
           </Button>
