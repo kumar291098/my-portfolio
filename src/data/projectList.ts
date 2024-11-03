@@ -58,13 +58,6 @@ export interface Project {
       liveDemoLink: 'https://kumar291098.github.io/text-Utils-Ak/',
       image: textUtill
     },
-    {
-      title: 'Expance Tracker',
-      description: 'In this app, you can track and manage your expenses efficiently. It provides features such as adding, editing, and deleting expenses, categorizing them, and generating expense reports. The user-friendly interface and streamlined functionality make expense management a breeze.',
-      techStack: ' JavaScript, HTML,CSS,  nodejs',
-      githubLink: 'https://github.com/kumar291098/Expense-tracker',
-      liveDemoLink: '',
-      image: tracker
-    },
+    
   ];
   
